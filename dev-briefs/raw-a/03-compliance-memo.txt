@@ -1,0 +1,13 @@
+MEMO - Compliance
+To: Collections Ops, vendor onboarding
+From: Marco Bellini, Compliance
+Date: 9 October 2026
+Re: Policy v4.1 amendments effective immediately for the assistant pilot
+
+1. Section 5.2, late band (8-45 days late): the deadline is the 7th business day after today, not the
+   10th. Persuasion attempts stay at 2. Early band unchanged.
+2. Annex A: add Monday 26 October 2026 as a bank holiday (regional closure). All other dates unchanged.
+3. For the avoidance of doubt: transfers after a recorded promise are closed as transferred with that
+   transfer's reason.
+
+No other changes.

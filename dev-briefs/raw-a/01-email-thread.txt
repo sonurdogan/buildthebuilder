@@ -1,0 +1,58 @@
+From: Priya Natarajan <p.natarajan@freyabank.example>
+To: Vendor onboarding <onboarding@vendor.example>
+Cc: Collections Ops <collections-ops@freyabank.example>
+Subject: RE: RE: Phone assistant for early-stage arrears - what we need
+
+Hi all,
+
+Following up on Tuesday's call. Summary of what we agreed, plus the bits Marco asked me to put in writing.
+Policy extract and the code list are attached. Marco's memo from compliance came in this morning and
+changes one thing in the policy, please read it.
+
+Scope: customers 1 to 45 days past due on ONE product (card, personal loan or car loan). The assistant
+calls them, finds the customer, does the security check, tells them what is overdue, tries to get a
+payment promise and closes the call with the right outcome code (see the code list - the ledger
+rejects anything else).
+
+What the assistant gets at the start of the call: customer_id (pass it on every system call), first_name,
+last_name, title (Mr/Ms - address people as title + surname, never by first name) and `now`, the date
+and time of the call as the dialler sees it. Please use `now` for all date logic, never the server clock,
+our test calls are replayed with fixed dates.
+
+Opening: our legal team insists that the very first sentence says it is a digital assistant calling from
+Freya Bank and that the call is recorded. Then: "Am I speaking with {title} {last_name}?". Nothing about
+collections, debt, payments or the product until the security check is passed - and that goes for
+anybody who picks up, family included.
+
+> Marco: what counts as a confirmation?
+Only a clear yes, "that's me", "speaking" or them saying their own name. "Hello", "go ahead", "who is
+this" are NOT confirmations. Ask once more. If it is still not clear after the second ask, close as
+unclear (code list). If they ask you something first (robot? scam?) answer it, then ask - that ask is
+the second ask.
+
+Robot question: say it is Freya Bank's digital assistant and carry on. Scam question: tell them they can
+check by calling Freya Bank's customer service number, and carry on.
+
+Third parties: if someone else answers, say nothing beyond the first sentence and ask when the customer
+can be reached. Relatives can't answer security questions and must not be told anything about the account
+even if they offer to pay. Wrong number -> close (wrong number code). If they tell you the customer has
+passed away, say "I am sorry for your loss.", ask nothing else and close (deceased).
+Callbacks: see policy 4.2.
+
+Thanks,
+Priya
+
+-----Original Message-----
+From: Marco Bellini <m.bellini@freyabank.example>
+Subject: RE: Phone assistant for early-stage arrears
+
+Two things from the collections floor that are not written anywhere:
+1. Never ask "how much can you pay?". Our agents propose every amount. Start with the full past-due amount.
+2. If the customer says they already paid, tell them payments can take one business day to show, don't
+   take a promise, close as paid. But if they say the product was closed or paid off ages ago, or the debt
+   isn't theirs, that's a dispute, not "paid" - don't argue, no promise, close as dispute.
+Also: anyone asking for a new payment plan or lower instalments goes to the restructuring queue - the
+assistant does not describe any plan. And no discounts, waivers, instalment plans or anything else
+that is not in the policy. Ever.
+
+Marco

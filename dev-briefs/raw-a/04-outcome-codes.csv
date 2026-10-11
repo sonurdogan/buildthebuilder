@@ -1,0 +1,17 @@
+outcome,reason,used_when
+promise,,at least one promise was recorded
+paid,,customer already paid this past-due amount
+transferred,restructuring,new payment plan or lower instalments requested
+transferred,human,customer insisted on a human
+transferred,support,hardship customer accepted customer support
+no_promise,refused,attempts used up / said twice they do not want to talk (verified)
+no_promise,hardship,hardship customer declined support
+no_promise,dispute,debt not theirs / product closed or paid off in the past
+no_promise,service_error,promise could not be recorded after a retry
+not_verified,failed,three wrong security answers
+not_verified,declined,refused the security questions (or said twice they do not want to talk before verification)
+not_reached,callback,callback booked with a third party
+not_reached,no_callback,no callback time inside the window
+not_reached,wrong_number,number does not belong to the customer
+not_reached,deceased,customer has died
+not_reached,unclear,still unclear who is on the line after the second ask

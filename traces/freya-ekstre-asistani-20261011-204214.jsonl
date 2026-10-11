@@ -1,0 +1,9 @@
+{"t": 0.0, "event": "start", "label": "freya-ekstre-asistani", "at": "2026-10-11T20:42:14+0300"}
+{"t": 0.15, "event": "inputs", "folder": "C:/Users/doruk/freya-case", "files": ["BRIEF.md", "statement-debt-call-flow.pdf", "test-environment/test-customers.json"], "chars": 20347, "mock_url": "https://freya-ekstre-mock.dorukyelken.workers.dev", "slot": "freya-ekstre-asistani"}
+{"t": 75.16, "event": "model_call", "model": "claude-opus-5-5", "purpose": "write the phone assistant's prompts, tool texts and fixed lines", "seconds": 74.71, "input_tokens": 2, "output_tokens": 8002, "backend": "agent_sdk"}
+{"t": 93.72, "event": "model_call", "model": "claude-opus-5-5", "purpose": "check the assistant against the rules and example conversations", "seconds": 18.56, "input_tokens": 2, "output_tokens": 1631, "backend": "agent_sdk"}
+{"t": 93.72, "event": "agent_reviewed", "changed": []}
+{"t": 93.72, "event": "texts", "problems": [], "rules": 37}
+{"t": 93.73, "event": "compiled", "nodes": ["setup", "handoff_agent_transfer", "handoff_second_factor_ivr", "handoff_return_to_supervisor", "main", "end"], "lint": []}
+{"t": 96.45, "event": "saved_on_freya", "workflow_id": "9f7df30d-c712-4144-a032-3757fccb6556", "agent_id": "0317efc3-4234-42b9-96aa-029d973db118", "version": 2, "steps": 6, "tools": 7}
+{"t": 96.8, "event": "end", "at": "2026-10-11T20:43:51+0300", "total_seconds": 96.8, "model_calls": 2, "workflow_id": "9f7df30d-c712-4144-a032-3757fccb6556", "agent_id": "0317efc3-4234-42b9-96aa-029d973db118", "export": "C:\\Users\\doruk\\VSCode Projects\\freya-hackathon\\out\\freya-ekstre-asistani.workflow.json"}
