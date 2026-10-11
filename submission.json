@@ -1,8 +1,17 @@
 {
-  "team": "TEAM_NAME",
-  "members": [{ "name": "Doruk Yelken", "email": "doruk.yelken@sunexpress.com" }],
-  "repo": "REPO_URL",
-  "commit": "COMMIT_HASH",
+  "team": "NOD",
+  "members": [
+    {
+      "name": "Doruk Yelken",
+      "email": "doruk.yelken@sunexpress.com"
+    },
+    {
+      "name": "Onur Doğan",
+      "email": "sonur.dogan4@gmail.com"
+    }
+  ],
+  "repo": "https://github.com/sonurdogan/buildthebuilder",
+  "commit": "5e63684",
   "run_command": "python mock_build.py {case_folder} --name freya-ekstre-mock && python build.py {case_folder} --pack --mock-url https://freya-ekstre-mock.dorukyelken.workers.dev --slot freya-ekstre-asistani",
   "workflow": "submission/final.workflow.json",
   "trace": "submission/final.log",
